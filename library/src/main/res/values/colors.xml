@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_text_color">#000000</color>
+    <color name="summary_text_color">#aaa</color>
+    <color name="icons_color">#888888</color>
+
+    <!-- Light -->
+    <color name="mpf_switch_track_disabled_light">#1F000000</color>
+    <color name="mpf_switch_track_normal_light">#AAAAAA</color>
+    <color name="mpf_switch_thumb_normal_light">#FFFAFAFA</color>
+    <color name="mpf_switch_thumb_disabled_light">#FFBDBDBD</color>
+    <color name="mpf_control_disabled_light">#43000000</color>
+    <color name="mpf_control_normal_light">#8A000000</color>
+
+    <!--Dark-->
+    <color name="mpf_switch_track_disabled_dark">#1AFFFFFF</color>
+    <color name="mpf_switch_track_normal_dark">#4DFFFFFF</color>
+    <color name="mpf_switch_thumb_normal_dark">#FFBDBDBD</color>
+    <color name="mpf_switch_thumb_disabled_dark">#FF424242</color>
+    <color name="mpf_control_disabled_dark">#4DFFFFFF</color>
+    <color name="mpf_control_normal_dark">#B3FFFFFF</color>
+
+</resources>
