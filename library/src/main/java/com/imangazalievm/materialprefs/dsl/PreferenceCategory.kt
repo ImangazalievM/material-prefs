@@ -2,6 +2,8 @@ package com.imangazalievm.materialprefs.dsl
 
 import com.imangazalievm.materialprefs.dsl.preferences.*
 import com.imangazalievm.materialprefs.views.PreferenceCategoryView
+import java.lang.IllegalArgumentException
+import kotlin.reflect.KClass
 
 @PreferencesMarker
 class PreferenceCategory(
@@ -30,39 +32,47 @@ class PreferenceCategory(
             .also { preferences.add(it) }
     }
 
-    fun labelPreference(key: String, builder: PreferenceBuilder<LabelPreference>) {
-        LabelPreference(key, container, appearanceManager)
-            .apply(builder)
-            .also { preferences.add(it) }
-    }
-
-    fun listSingleChoice(
+    fun <T : Any> labelPreference(
         key: String,
-        showRadioButtons: Boolean = true,
-        builder: PreferenceBuilder<LabelPreference>
+        valueType: KClass<T>,
+        builder: PreferenceBuilder<LabelPreference<T>>
     ) {
-        LabelPreference(key, container, appearanceManager)
+        if (!LabelPreference.isSupportedType(valueType)) {
+            throw IllegalArgumentException("This data type is not supported")
+        }
+
+        LabelPreference<T>(key, valueType, container, appearanceManager)
             .apply(builder)
             .also { preferences.add(it) }
     }
 
-    fun listMultiChoice(key: String, builder: PreferenceBuilder<LabelPreference>) {
-        LabelPreference(key, container, appearanceManager)
-            .apply(builder)
-            .also { preferences.add(it) }
-    }
+    // fun listSingleChoice(
+    //     key: String,
+    //     showRadioButtons: Boolean = true,
+    //     builder: PreferenceBuilder<LabelPreference>
+    // ) {
+    //     LabelPreference(key, container, appearanceManager)
+    //         .apply(builder)
+    //         .also { preferences.add(it) }
+    // }
 
-    fun textInput(key: String, builder: PreferenceBuilder<LabelPreference>) {
-        LabelPreference(key, container, appearanceManager)
-            .apply(builder)
-            .also { preferences.add(it) }
-    }
+    // fun listMultiChoice(key: String, builder: PreferenceBuilder<LabelPreference>) {
+    //     LabelPreference(key, container, appearanceManager)
+    //         .apply(builder)
+    //         .also { preferences.add(it) }
+    // }
 
-    fun dateTime(key: String, builder: PreferenceBuilder<LabelPreference>) {
-        LabelPreference(key, container, appearanceManager)
-            .apply(builder)
-            .also { preferences.add(it) }
-    }
+    // fun textInput(key: String, builder: PreferenceBuilder<LabelPreference>) {
+    //     LabelPreference(key, container, appearanceManager)
+    //         .apply(builder)
+    //         .also { preferences.add(it) }
+    // }
+
+    // fun dateTime(key: String, builder: PreferenceBuilder<LabelPreference>) {
+    //     LabelPreference(key, container, appearanceManager)
+    //         .apply(builder)
+    //         .also { preferences.add(it) }
+    // }
 
     internal fun getView(): PreferenceCategoryView {
         val view = PreferenceCategoryView(container.context)

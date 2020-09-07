@@ -9,7 +9,6 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="center"
-        android:clickable="false"
         app:srcCompat="@drawable/ic_arrow_gray" />
 
 </FrameLayout>

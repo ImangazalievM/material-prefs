@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val defValues = defaultPrefValues {
-            "enable_check" to true
-            "enable_switch" to false
-            "my_label" to "Hello world!"
+            "data_transfer" to false
+            "notifications" to true
+            "app_language" to "en"
         }
 
         val storage = defaultPrefsStorage("my_app", defValues)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                switch("enable_switch") {
+                switch("notifications") {
                     title("Notifications")
                     summary("Receive notifications")
                     onChecked { isChecked ->
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                checkbox("enable_check") {
+                checkbox("data_transfer") {
                     title("Personal Data Transfer")
                     summary("Allow personal data transfer to the third party")
                     onChecked { isChecked ->
@@ -53,9 +53,17 @@ class MainActivity : AppCompatActivity() {
             }
 
             category("App Settings") {
-                labelPreference("app_language") {
+
+                val languageNames = mapOf(
+                    "ar" to "Arabic",
+                    "en" to "English",
+                    "ru" to "Russian"
+                )
+                labelPreference("app_language", String::class) {
                     title("App Language")
                     icon(R.drawable.ic_language)
+                    valuePresenter { languageNames[it]!! }
+
                     onClick {
                         showMessage("My account")
                     }

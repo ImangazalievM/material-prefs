@@ -5,6 +5,8 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.imangazalievm.materialprefs.R
+import com.imangazalievm.materialprefs.util.inflate
 import com.imangazalievm.materialprefs.views.BasePreferenceView
 
 class LabelPreferenceView(
@@ -14,7 +16,7 @@ class LabelPreferenceView(
 ) : BasePreferenceView(context, attrs, themeResId) {
 
     override fun createValueView(parent: ViewGroup): View {
-        return TextView(context)
+        return parent.inflate(R.layout.pref_label)
     }
 
 }
