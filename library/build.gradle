@@ -37,7 +37,7 @@ dependencies {
 
 publish {
     userOrg = 'imangazaliev'
-    groupId = 'com.imangazalievm'
+    groupId = 'com.github.imangazalievm'
     artifactId = 'material-prefs'
     publishVersion = LIBRARY_VERSION_NAME
     desc = ''
