@@ -40,7 +40,7 @@ publish {
     groupId = 'com.github.imangazalievm'
     artifactId = 'material-prefs'
     publishVersion = LIBRARY_VERSION_NAME
-    desc = ''
+    desc = 'A beautiful and extensible API for bulding preferences screen'
     licences = ['MIT']
     website = 'https://github.com/ImangazalievM/material-prefs'
 }
