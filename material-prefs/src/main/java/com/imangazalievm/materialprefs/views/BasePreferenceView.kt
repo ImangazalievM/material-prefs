@@ -21,9 +21,7 @@ abstract class BasePreferenceView(
     context: Context,
     attrs: AttributeSet? = null,
     themeResId: Int = 0
-) : LinearLayout(context, attrs, themeResId) {
-
-    private lateinit var storage: PreferencesStorage
+) : PreferenceView(context, attrs, themeResId) {
 
     init {
         orientation = HORIZONTAL
@@ -36,10 +34,6 @@ abstract class BasePreferenceView(
 
         inflate(R.layout.base_preference, true)
         prefValueContainer.addView(createValueView(prefValueContainer))
-    }
-
-    internal fun setStorage(storage: PreferencesStorage) {
-        this.storage = storage
     }
 
     fun setTitleColor(color: Int) {

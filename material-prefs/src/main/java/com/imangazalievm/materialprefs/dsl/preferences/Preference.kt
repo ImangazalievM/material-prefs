@@ -2,12 +2,12 @@ package com.imangazalievm.materialprefs.dsl.preferences
 
 import com.imangazalievm.materialprefs.dsl.PreferencesMarker
 import com.imangazalievm.materialprefs.dsl.PrefsContainer
-import com.imangazalievm.materialprefs.views.BasePreferenceView
+import com.imangazalievm.materialprefs.views.PreferenceView
 
 typealias PreferenceBuilder<T> = T.() -> Unit
 
 @PreferencesMarker
-abstract class Preference<P, V : BasePreferenceView, T : Any>(
+abstract class Preference<P, V : PreferenceView, T : Any>(
     protected val container: PrefsContainer,
     protected val key: String
 ) where P : Preference<P, V, T> {

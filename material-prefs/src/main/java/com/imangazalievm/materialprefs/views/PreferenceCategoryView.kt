@@ -52,7 +52,7 @@ class PreferenceCategoryView(
         title.setTextColor(color)
     }
 
-    fun addPreferenceView(view: BasePreferenceView) {
+    fun addPreferenceView(view: PreferenceView) {
         val preferenceLp = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         container.addView(view, preferenceLp)
     }
