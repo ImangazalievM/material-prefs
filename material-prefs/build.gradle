@@ -1,0 +1,8 @@
+ext.module_group = "com.afollestad.material-prefs"
+ext.module_name = "core"
+
+apply from: rootProject.file("gradle/android_library_config.gradle")
+
+dependencies {
+
+}

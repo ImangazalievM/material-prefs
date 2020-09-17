@@ -1,0 +1,10 @@
+ext.module_group = "com.imangazaliev.material-prefs"
+ext.module_name = "dialogs"
+
+apply from: rootProject.file("gradle/android_library_config.gradle")
+
+dependencies {
+    implementation project(':material-prefs')
+    api 'com.afollestad.material-dialogs:core:3.3.0'
+    api 'com.afollestad.material-dialogs:input:3.3.0'
+}

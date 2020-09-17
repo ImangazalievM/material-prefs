@@ -9,13 +9,20 @@ Add this in app's ```build.gradle``` file:
     implementation 'com.github.imangazalievm:material-prefs:1.0.0'
 ```
 
-### 📄 Documentation
+## 📄 Documentation
 
-### ⭐️ Features
+## ⭐ Features
 
-### 🔥 Usage
+* Convenient and extensible DSL
+* Flexible appearance settings
+* Unified view on Lollipop and Pre-Lollipop
+* Ability to use custom storage
+* Default prefs values
+* Light and dark themes
 
-### 🤝 License
+## 🔥 Usage
+
+## 🤝 License
 
 ```
 The MIT License

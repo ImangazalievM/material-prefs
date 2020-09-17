@@ -1,0 +1,9 @@
+ext.module_group = "com.imangazaliev.material-prefs"
+ext.module_name = "color-picker"
+
+apply from: rootProject.file("gradle/android_library_config.gradle")
+
+dependencies {
+    implementation project(':material-prefs')
+    implementation 'com.afollestad.material-dialogs:color:3.3.0'
+}

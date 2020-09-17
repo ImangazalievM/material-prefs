@@ -1,0 +1,45 @@
+ext.module_package_id = "${module_group}.${module_name}"
+logger.info("Package ID: $module_package_id")
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    defaultConfig {
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.compile_sdk
+        versionCode versions.publish_version_code
+        versionName versions.publish_version
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    sourceSets {
+        main.res.srcDirs = [
+                "src/main/res",
+                "src/main/res-public"
+        ]
+    }
+
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+}
+
+apply from: rootProject.file("gradle/android_bintray_config.gradle")

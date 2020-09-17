@@ -1,3 +1,7 @@
-include ':library'
-include ':app'
+include ':material-prefs-datetimepicker'
+include ':material-prefs-colorpicker'
+include ':material-prefs-dialogs'
+include ':material-prefs'
+include ':sample-app'
+
 rootProject.name = "material-prefs"
