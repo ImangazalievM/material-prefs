@@ -2,8 +2,8 @@ ext.versions = [
         min_sdk: 17,
         compile_sdk: 29,
         build_tools: "29.0.0",
-        publish_version: "1.0.0",
-        publish_version_code: 1
+        publish_version: "1.0.1",
+        publish_version_code: 2
 ]
 
 buildscript {
