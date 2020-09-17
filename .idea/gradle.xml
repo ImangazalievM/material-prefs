@@ -11,8 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/material-prefs" />
+            <option value="$PROJECT_DIR$/material-prefs-colorpicker" />
+            <option value="$PROJECT_DIR$/material-prefs-datetimepicker" />
+            <option value="$PROJECT_DIR$/material-prefs-dialogs" />
+            <option value="$PROJECT_DIR$/sample-app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
