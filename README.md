@@ -7,10 +7,10 @@
 Add this in app's ```build.gradle``` file:
 
 ```groovy
-    implementation 'com.github.imangazalievm.material-prefs:core:<version>'
-    implementation 'com.github.imangazalievm.material-prefs:dialogs:<version>'
-    implementation 'com.github.imangazalievm.material-prefs:date-time:<version>'
-    implementation 'com.github.imangazalievm.material-prefs:color-picker:<version>'
+implementation 'com.github.imangazalievm.material-prefs:core:<version>'
+implementation 'com.github.imangazalievm.material-prefs:dialogs:<version>'
+implementation 'com.github.imangazalievm.material-prefs:date-time:<version>'
+implementation 'com.github.imangazalievm.material-prefs:color-picker:<version>'
 ```
 
 ## ⭐ Features
