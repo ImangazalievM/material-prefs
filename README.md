@@ -3,14 +3,14 @@
 # Material Preferences
 [ ![Download](https://api.bintray.com/packages/imangazaliev/maven/material-prefs%3Acore/images/download.svg) ](https://bintray.com/imangazaliev/maven/material-prefs%3Acore/_latestVersion)
 
-### 💻 Installation
+## 💻 Installation
 Add this in app's ```build.gradle``` file:
 
 ```groovy
-    implementation 'com.github.imangazalievm.material-prefs:core:1.0.0'
-    implementation 'com.github.imangazalievm.material-prefs:dialogs:1.0.0'
-    implementation 'com.github.imangazalievm.material-prefs:date-time:1.0.0'
-    implementation 'com.github.imangazalievm.material-prefs:color-picker:1.0.0'
+    implementation 'com.github.imangazalievm.material-prefs:core:<version>'
+    implementation 'com.github.imangazalievm.material-prefs:dialogs:<version>'
+    implementation 'com.github.imangazalievm.material-prefs:date-time:<version>'
+    implementation 'com.github.imangazalievm.material-prefs:color-picker:<version>'
 ```
 
 ## ⭐ Features
@@ -24,12 +24,12 @@ Add this in app's ```build.gradle``` file:
 
 ## 🔥 Usage
 
-To start using the library you need to do 3simple steps:
+To start using the library you need to do 3 simple steps:
 1. Add `MaterialPreferencesView` in your layout
 2. Provide preferences storage:<br>
     3.1 Default storage - `DefaultPreferencesStorage`<br>
     3.1 Any custom storage which implements the `PreferencesStorage` interface
-3. Builds prefs screen via MaterialPrefs DSL
+3. Build prefs screen via MaterialPrefs DSL
 
 If want to use `DefaultPreferencesStorage` you have to provide initial values through `DefaultValuesContainer`.
 
@@ -83,8 +83,6 @@ The library includes 4 modules:
 * **color-picker** - color picker
 
 Three last modules based on [Material Dialogs](https://github.com/afollestad/material-dialogs) library.
-
-All prefs values save their values automatically after a value is changed.
 
 ### Core
 
@@ -189,14 +187,14 @@ colorPicker("my_key") {
 }
 ```
 
-### Custom pref item
+### Custom preference item
 
-To create custom pref item you have to do 3 steps:
+To create custom preference item you have to do 3 steps:
 
 **Step 1:**
 Create preference view class inherited from `PreferenceView` or `BasePreferenceView`. 
 
-If your view inherited from `BasePreferenceView` you have to implement `getValueView` method:
+If your view inherited from `BasePreferenceView` you have to implement `createValueView` method:
 
 ```kotlin
 class MyPreferenceView(
@@ -259,7 +257,7 @@ fun myPreference(builder: PreferenceBuilder<MyPreference>) {
 ```
 The MIT License
 
-Copyright (c) 2016-2020 Mahach Imangazaliev
+Copyright (c) 2020 Mahach Imangazaliev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
