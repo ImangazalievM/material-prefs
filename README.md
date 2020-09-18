@@ -65,7 +65,7 @@ prefs(prefsView, storage) {
             title("My pref item")
             icon(R.drawable.my_icon)
             onClick {
-                showMessage("Clicked!")
+                //my action
             }
         }
     }
@@ -89,11 +89,12 @@ Three last modules based on [Material Dialogs](https://github.com/afollestad/mat
 **Simple preference:**
 ```kotlin
 preference {
-    title("My account")
-    icon(R.drawable.ic_account_box)
+    title("Title")
+    summary("My description")
+    icon(R.drawable.ic_my_icon)
     showArrow(true)
     onClick {
-        showMessage("My account")
+        //my action
     }
 }
 ```
@@ -101,10 +102,10 @@ preference {
 **Switch:**
 ```kotlin
 switch("my_key") {
-    title("Notifications")
-    summary("Receive notifications")
+    title("Title")
+    summary("My description")
     onChecked { isChecked ->
-        showMessage("Notifications: $isChecked")
+        //my action
     }
 }
 ```
@@ -112,10 +113,10 @@ switch("my_key") {
 **Checkbox:**
 ```kotlin
 checkbox("my_key") {
-    title("Personal Data Transfer")
-    summary("Allow personal data transfer to the third party")
+    title("Title")
+    summary("My description")
     onChecked { isChecked ->
-        showMessage("Personal Data Transfer: $isChecked")
+        //my action
     }
 }
 ```
@@ -123,19 +124,20 @@ checkbox("my_key") {
 **Label preference:**
 ```kotlin
 labelPreference("my_key", String::class) {
-    title("App version")
+    title("Title")
     onClick {
-        showMessage("App version")
+        //my action
     }
 }
 ```
 
 ### Dialogs
 
+**Single Choice:**
 ```kotlin
 listSingleChoice("my_key", String::class) {
     title("Title")
-    icon(R.drawable.ic_myicon)
+    icon(R.drawable.ic_my_icon)
     showRadioButtons(true)
     items(
         listOf(
@@ -147,11 +149,38 @@ listSingleChoice("my_key", String::class) {
 }
 ```
 
-**Text input:**
+**Multi Choice:**
+```kotlin
+listMultiChoice("my_key", String::class) {
+    title("Title")
+    allowEmptySelection(false)
+    //required
+    listValuesSerializer { it.joinToString() }
+    //required
+    listValuesDeserializer {
+        if (it.isNotEmpty()) {
+            it.split(",")
+                .map { number -> number.trim().toInt() }
+        } else emptyList()
+    }             
+    items(
+        listOf(
+            ListItem("one", "Item 1"),
+            ListItem("two", "Item 2"),
+            ListItem("three", "Item 3")
+        )
+    )
+}
+```
+
+**Text Input:**
 ```kotlin
 textInput("my_key") {
     title("Title")
     icon(R.drawable.ic_username)
+    onNewInput { 
+        //my action       
+    }
 }
 ```
 
@@ -160,21 +189,36 @@ textInput("my_key") {
 **Date picker:**
 ```kotlin
 datePicker("my_key") {
-    
+    title("Title")
+    val formatter = SimpleDateFormat("dd.MM.yyyy ", Locale.US)
+    valuePresenter { formatter.format(it) }
+    onValueSelected {
+        //my action
+    }
 }
 ```
 
 **Time picker:**
 ```kotlin
 timePicker("my_key") {
-    
+    title("Title")
+    val formatter = SimpleDateFormat("hh:mm ", Locale.US)
+    valuePresenter { formatter.format(it) }
+    onValueSelected {
+        //my action
+    }
 }
 ```
 
 **Date and picker:**
 ```kotlin
 dateTimePicker("my_key") {
-    
+    title("Title")
+    val formatter = SimpleDateFormat("hh:mm dd.MM.yyyy ", Locale.US)
+    valuePresenter { formatter.format(it) }
+    onValueSelected {
+        //my action
+    }
 }
 ```
 
@@ -183,7 +227,12 @@ dateTimePicker("my_key") {
 
 ```kotlin
 colorPicker("my_key") {
-    
+    title("Title")
+    val colors = intArrayOf(Color.RED, Color.GREEN, Color.BLUE)
+    colors(colors)
+    onColorSelected {
+        //my action
+    }
 }
 ```
 
