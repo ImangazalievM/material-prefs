@@ -1,13 +1,13 @@
 ![Image](/images/logo.png)
 
 # Material Preferences
-[ ![Download](https://api.bintray.com/packages/imangazaliev/maven/material-prefs%3Acore/images/download.svg) ](https://bintray.com/imangazaliev/maven/material-prefs%3Acore/_latestVersion)
 
 ![Image](/images/screenshots.png)
 
 ## 💻 Installation
-Add this in app's ```build.gradle``` file:
+[ ![Download](https://api.bintray.com/packages/imangazaliev/maven/material-prefs%3Acore/images/download.svg) ](https://bintray.com/imangazaliev/maven/material-prefs%3Acore/_latestVersion)
 
+Add this in app's ```build.gradle``` file:
 ```groovy
 implementation 'com.github.imangazalievm.material-prefs:core:<version>'
 implementation 'com.github.imangazalievm.material-prefs:dialogs:<version>'
