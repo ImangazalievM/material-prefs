@@ -3,6 +3,8 @@
 # Material Preferences
 [ ![Download](https://api.bintray.com/packages/imangazaliev/maven/material-prefs%3Acore/images/download.svg) ](https://bintray.com/imangazaliev/maven/material-prefs%3Acore/_latestVersion)
 
+![Image](/images/screenshots.png)
+
 ## 💻 Installation
 Add this in app's ```build.gradle``` file:
 
@@ -69,10 +71,8 @@ prefs(prefsView, storage) {
             }
         }
     }
-}
-            
+}   
 ```
-
 
 ## 📄 Documentation
 
