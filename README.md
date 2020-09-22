@@ -33,7 +33,7 @@ To start using the library you need to do 3 simple steps:
     3.1 Any custom storage which implements the `PreferencesStorage` interface
 3. Build prefs screen via MaterialPrefs DSL
 
-If want to use `DefaultPreferencesStorage` you have to provide initial values through `DefaultValuesContainer`.
+If you want to use `DefaultPreferencesStorage` you have to provide initial values through `DefaultValuesContainer`.
 
 **Step 1**
 Place the `MaterialPreferencesView` in your layout:
@@ -55,7 +55,7 @@ val defValues = defaultPrefValues {
     "my_boolean" to true
 }
 
-val storage = defaultPrefsStorage("my_prefs", defValues)
+val storage = DefaultPrefsStorage("my_prefs", defValues)
 ```
 
 **Step 3**
