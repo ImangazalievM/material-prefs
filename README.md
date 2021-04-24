@@ -55,7 +55,7 @@ val defValues = defaultPrefValues {
     "my_boolean" to true
 }
 
-val storage = DefaultPreferencesStorage("my_prefs", defValues)
+val storage = defaultPrefsStorage("my_prefs", defValues)
 ```
 
 **Step 3**
