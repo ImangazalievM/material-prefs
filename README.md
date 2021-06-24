@@ -9,10 +9,10 @@
 
 Add this in app's ```build.gradle``` file:
 ```groovy
-implementation 'com.imangazalievm.material-prefs:core:<version>'
-implementation 'com.imangazalievm.material-prefs:dialogs:<version>'
-implementation 'com.imangazalievm.material-prefs:date-time:<version>'
-implementation 'com.imangazalievm.material-prefs:color-picker:<version>'
+implementation 'com.imangazaliev.material-prefs:core:<version>'
+implementation 'com.imangazaliev.material-prefs:dialogs:<version>'
+implementation 'com.imangazaliev.material-prefs:date-time:<version>'
+implementation 'com.imangazaliev.material-prefs:color-picker:<version>'
 ```
 
 ## ⭐ Features
@@ -55,7 +55,7 @@ val defValues = defaultPrefValues {
     "my_boolean" to true
 }
 
-val storage = DefaultPrefsStorage("my_prefs", defValues)
+val storage = defaultPrefsStorage("my_prefs", defValues)
 ```
 
 **Step 3**
