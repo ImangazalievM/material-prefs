@@ -38,7 +38,7 @@ publish {
     bintrayUser = user
     bintrayKey = key
     userOrg = 'imangazaliev'
-    groupId = 'com.github.imangazalievm.material-prefs'
+    groupId = 'com.imangazalievm.material-prefs'
     uploadName = "material-prefs:$module_name"
     artifactId = module_name
     publishVersion = versions.publish_version

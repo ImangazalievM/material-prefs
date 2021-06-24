@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.imangazalievm.materialprefs.views.ColorCircleView
+<com.imangazaliev.materialprefs.views.ColorCircleView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/colorView"
     android:layout_width="26dp"

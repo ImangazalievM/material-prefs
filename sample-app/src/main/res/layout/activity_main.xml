@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.imangazalievm.materialprefs.views.MaterialPreferencesView
+    <com.imangazaliev.materialprefs.views.MaterialPreferencesView
         android:id="@+id/prefsView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
