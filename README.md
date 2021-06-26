@@ -38,7 +38,7 @@ If you want to use `DefaultPreferencesStorage` you have to provide initial value
 **Step 1**
 Place the `MaterialPreferencesView` in your layout:
 ```xml
-<com.imangazalievm.materialprefs.views.MaterialPreferencesView
+<com.imangazaliev.materialprefs.views.MaterialPreferencesView
         android:id="@+id/prefsView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
