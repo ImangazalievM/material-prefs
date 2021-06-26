@@ -8,6 +8,7 @@ import android.widget.CompoundButton
 import com.imangazaliev.materialprefs.R
 import com.imangazaliev.materialprefs.util.adjustAlpha
 import com.imangazaliev.materialprefs.util.inflate
+import com.imangazaliev.materialprefs.util.modifySwitchDrawable
 import kotlinx.android.synthetic.main.pref_switch.view.*
 
 class SwitchPreferenceView(
