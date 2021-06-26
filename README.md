@@ -16,6 +16,8 @@ implementation 'com.imangazaliev.material-prefs:date-time:<version>'
 implementation 'com.imangazaliev.material-prefs:color-picker:<version>'
 ```
 
+⚠ **Attention!** The package name has been changed from `com.github.imangazalievm.material-prefs:xxx` due to the transfer of the library to Maven Central.
+
 ## ⭐ Features
 
 * Convenient and extensible DSL
