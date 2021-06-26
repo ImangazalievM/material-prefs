@@ -5,7 +5,7 @@
 ![Image](/images/screenshots.png)
 
 ## 💻 Installation
-[![Download](https://img.shields.io/maven-central/v/com.imangazaliev.material-prefs/core?label=input&style=flat)](https://repo1.maven.org/maven2/com/imangazaliev/material-prefs/core)
+[![Download](https://img.shields.io/maven-central/v/com.imangazaliev.material-prefs/core?label=material-prefs&style=flat)](https://repo1.maven.org/maven2/com/imangazaliev/material-prefs/core)
 [![Licence](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat)](https://opensource.org/licenses/Apache-2.0)
 
 Add this in app's ```build.gradle``` file:
